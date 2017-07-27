@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   
   resources :articles #give us the CRUD functionalities with this one line.
   
+  get 'signup', to: 'users#new'
+ 
+  resources :users, except: [:new] #give us the routes of users. Ruby magiccccc
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
